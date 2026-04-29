@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmagoudi <tmagoudi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 12:03:43 by tmagoudi          #+#    #+#             */
-/*   Updated: 2026/04/29 12:06:57 by tmagoudi         ###   ########.fr       */
+/*   Created: 2026/04/29 12:17:47 by tmagoudi          #+#    #+#             */
+/*   Updated: 2026/04/29 12:34:39 by tmagoudi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-#define PRINTF_H
+#include "ft_printf.h"
 
-#include "libft.h"
-
-
-#endif
+int	ft_putchar(char c)
+{
+	write(1, &c, 1);
+	return (1);
+}

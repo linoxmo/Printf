@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmagoudi <tmagoudi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 12:42:00 by tmagoudi          #+#    #+#             */
-/*   Updated: 2026/04/29 13:28:34 by tmagoudi         ###   ########.fr       */
+/*   Created: 2026/04/29 13:29:05 by tmagoudi          #+#    #+#             */
+/*   Updated: 2026/04/29 18:04:50 by tmagoudi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putstr(const char *s)
+int	ft_printf(const char *str, ...)
 {
-	write(1, s, ft_strlen(s));
+	size_t	i;
+	int	count;
+	va_list parameters;
+	
+	count = 0;
+	i = -1;
+	va_start(parameters, str);
+	while (str[++i])
+	{
+		count += ft_putchar(str[i]);
+	}
+	
+	va_end(parameters);
+	return(count);
 }
+

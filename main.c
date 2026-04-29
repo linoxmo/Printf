@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmagoudi <tmagoudi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 12:42:00 by tmagoudi          #+#    #+#             */
-/*   Updated: 2026/04/29 13:28:34 by tmagoudi         ###   ########.fr       */
+/*   Created: 2026/04/29 17:58:40 by tmagoudi          #+#    #+#             */
+/*   Updated: 2026/04/29 18:02:22 by tmagoudi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include  <stdio.h>
 
-void	ft_putstr(const char *s)
+int     main()
 {
-	write(1, s, ft_strlen(s));
+        int     count;
+
+        count = ft_printf("hello");
+        printf("%d\n", count);
 }
+

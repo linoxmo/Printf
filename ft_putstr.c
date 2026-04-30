@@ -6,13 +6,13 @@
 /*   By: tmagoudi <tmagoudi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 12:42:00 by tmagoudi          #+#    #+#             */
-/*   Updated: 2026/04/29 13:28:34 by tmagoudi         ###   ########.fr       */
+/*   Updated: 2026/04/30 17:39:45 by tmagoudi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putstr(const char *s)
+int	ft_putstr(const char *s)
 {
-	write(1, s, ft_strlen(s));
+	return (write(1, s, ft_strlen(s)));
 }

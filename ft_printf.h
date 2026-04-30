@@ -6,7 +6,7 @@
 /*   By: tmagoudi <tmagoudi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 12:03:43 by tmagoudi          #+#    #+#             */
-/*   Updated: 2026/04/29 18:16:14 by tmagoudi         ###   ########.fr       */
+/*   Updated: 2026/04/30 20:57:12 by tmagoudi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@
 
 int	ft_putchar(char c);
 size_t	ft_strlen(const char *s);
-void	ft_putstr(const char *s);
+int	ft_putstr(const char *s);
 int	ft_printf(const char *, ...);
-
+int	ft_putnbr(int	nb);
+int	ft_putup(unsigned int nb);
+int	ft_puthexa(unsigned int nb);
 #endif

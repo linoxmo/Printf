@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_puthexa.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmagoudi <tmagoudi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 17:58:40 by tmagoudi          #+#    #+#             */
-/*   Updated: 2026/04/30 21:02:52 by tmagoudi         ###   ########.fr       */
+/*   Created: 2026/04/30 20:51:18 by tmagoudi          #+#    #+#             */
+/*   Updated: 2026/04/30 21:02:11 by tmagoudi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include  <stdio.h>
 
-int     main()
+int   ft_puthexa(unsigned int nb)
 {
-        int     count;
-	int	count_1;
+        int     	count;
+        char    	nbr;
+	char	*hex;
 
-        count = ft_printf("h%cel %q  %s %d %i le %u %% %x", 'm', "hello", 2456, 74877644, 4294967295, 1764564);
-	printf("\n");
-	count_1 = printf("h%cel %q  %s %d %i le %u %% %x", 'm', "hello",2453, 7454654, 4294967295, 1764564);
-        printf("\n%d\n", count);
-	printf("%d\n", count_1);
-
+	hex = "0123456789abcdef";
+        count = 0;
+        if (nb > 15)
+                count += ft_puthexa(nb / 16);
+        nbr = hex[(nb % 16)];
+        write(1, &nbr, 1);
+        count ++;
+        return (count);
 }
 

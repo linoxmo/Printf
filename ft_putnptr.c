@@ -6,7 +6,7 @@
 /*   By: tmagoudi <tmagoudi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 14:01:11 by tmagoudi          #+#    #+#             */
-/*   Updated: 2026/05/01 17:50:29 by tmagoudi         ###   ########.fr       */
+/*   Updated: 2026/05/01 18:11:21 by tmagoudi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,7 @@ static int   ft_puthexaralph(unsigned long long nb)
         count ++;
         return (count);
 }
-
-int	ft_putnptr( unsigned long long ptr)
+int	ft_putnptr(unsigned long long  ptr)
 {
 	
 	if (!ptr)

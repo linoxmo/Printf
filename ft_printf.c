@@ -6,7 +6,7 @@
 /*   By: tmagoudi <tmagoudi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 13:29:05 by tmagoudi          #+#    #+#             */
-/*   Updated: 2026/05/01 17:29:12 by tmagoudi         ###   ########.fr       */
+/*   Updated: 2026/05/01 18:11:07 by tmagoudi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static	int	ft_put(char c, va_list parameters)
 	if (c == 'X')
 		return (ft_putHEXA(va_arg(parameters, unsigned int)));
 	if (c == 'p')
-		return (ft_putnptr(va_arg(parameters, unsigned long long )));
+		return (ft_putnptr((va_arg(parameters, unsigned long long))));
 	return (0);
 }
 
@@ -52,7 +52,7 @@ int	ft_printf(const char *str, ...)
 	va_start(parameters, str);
 	while (str[++i])
 	{
-		if (str[i] == '%' && is_special_c(str[i+1]))
+		if (str[i] == '%' && str[i+1] && is_special_c(str[i+1]))
 		{
 			count += ft_put(str[i+1], parameters);
 			i++;

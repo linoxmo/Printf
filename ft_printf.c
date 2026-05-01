@@ -6,7 +6,7 @@
 /*   By: tmagoudi <tmagoudi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 13:29:05 by tmagoudi          #+#    #+#             */
-/*   Updated: 2026/04/30 20:58:29 by tmagoudi         ###   ########.fr       */
+/*   Updated: 2026/05/01 17:29:12 by tmagoudi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,16 @@ static	int	ft_put(char c, va_list parameters)
 		return(ft_putchar(c));
 	if (c == 'x')
 		return (ft_puthexa(va_arg(parameters, unsigned int)));
+	if (c == 'X')
+		return (ft_putHEXA(va_arg(parameters, unsigned int)));
+	if (c == 'p')
+		return (ft_putnptr(va_arg(parameters, unsigned long long )));
 	return (0);
 }
 
 static	int	is_special_c(char c)
 {
-	if ( c == 'c' || c == 's' || c == 'd' || c == 'u' || c == 'i' || c == '%' || c == 'x')
+	if ( c == 'c' || c == 's' || c == 'd' || c == 'u' || c == 'i' || c == '%' || c == 'x' || c == 'X' || c == 'p')
 		return(1);
 	return(0);
 

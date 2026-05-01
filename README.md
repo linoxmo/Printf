@@ -19,6 +19,8 @@ The goal is to understand and implement:
 int ft_printf(const char *format, ...);
 ```
 
+
+```text
 ft_printf/
 ├── ft_printf.c
 ├── ft_printf_utils.c
@@ -31,6 +33,7 @@ ft_printf/
 ├── ft_putptr.c
 ├── ft_printf.h
 ├── Makefile
+```
 
 ## Instructions
 

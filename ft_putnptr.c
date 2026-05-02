@@ -6,7 +6,7 @@
 /*   By: tmagoudi <tmagoudi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 14:01:11 by tmagoudi          #+#    #+#             */
-/*   Updated: 2026/05/01 18:11:21 by tmagoudi         ###   ########.fr       */
+/*   Updated: 2026/05/02 11:25:30 by tmagoudi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int   ft_puthexaralph(unsigned long long nb)
         hex = "0123456789abcdef";
         count = 0;
         if (nb > 15)
-                count += ft_puthexa(nb / 16);
+                count += ft_puthexaralph(nb / 16);
         nbr = hex[(nb % 16)];
         write(1, &nbr, 1);
         count ++;

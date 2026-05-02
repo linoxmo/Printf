@@ -6,7 +6,7 @@
 /*   By: tmagoudi <tmagoudi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 13:29:05 by tmagoudi          #+#    #+#             */
-/*   Updated: 2026/05/01 18:11:07 by tmagoudi         ###   ########.fr       */
+/*   Updated: 2026/05/02 19:02:42 by tmagoudi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,12 @@ int	ft_printf(const char *str, ...)
 			count += ft_put(str[i+1], parameters);
 			i++;
 		}
-		else 
+		else
+		{
 			count += ft_putchar(str[i]);
+			if (str[i] == '%')
+				i++;
+		}
 	}
 	va_end(parameters);
 	return(count);

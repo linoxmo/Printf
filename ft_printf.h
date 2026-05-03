@@ -6,24 +6,24 @@
 /*   By: tmagoudi <tmagoudi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 12:03:43 by tmagoudi          #+#    #+#             */
-/*   Updated: 2026/05/01 18:11:28 by tmagoudi         ###   ########.fr       */
+/*   Updated: 2026/05/03 14:35:17 by tmagoudi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-#define PRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-#include <stdint.h>
-#include <unistd.h>
-#include <stdarg.h>
+# include <stdarg.h>
+# include <stdint.h>
+# include <unistd.h>
 
-int	ft_putchar(char c);
+int		ft_putchar(char c);
 size_t	ft_strlen(const char *s);
-int	ft_putstr(const char *s);
-int	ft_printf(const char *, ...);
-int	ft_putnbr(int	nb);
-int	ft_putup(unsigned int nb);
-int	ft_puthexa(unsigned int nb);
-int	ft_putHEXA(unsigned int nb);
-int	ft_putnptr(unsigned long long ptr);
+int		ft_putstr(const char *s);
+int		ft_printf(const char *s, ...);
+int		ft_putnbr(int nb);
+int		ft_putup(unsigned int nb);
+int		ft_puthexa(unsigned int nb);
+int		ft_puthexa1(unsigned int nb);
+int		ft_putnptr(unsigned long long ptr);
 #endif

@@ -12,20 +12,23 @@
 
 #include "ft_printf.h"
 #include <limits.h>
-#include  <stdio.h>
+#include <stdio.h>
 
-int     main()
+int	main(void)
 {
-        int     count;
-	int	count_1;
-	char *test = "hello";
-	char *test_1 = NULL;
+	int		count;
+	int		count_1;
+	char	*test;
+	char	*test_1;
 
-        count = ft_printf("h%cel  %l %s %d %i le %u %% %x %X %p %p", 'm', "hello", 2456, 74877644, 42949672, 0, 456, ULONG_MAX , -ULONG_MAX);
+	test = "hello";
+	test_1 = NULL;
+	count = ft_printf("h%cel  %l %s %d %i le %u %% %x %X %p %p", 'm', "hello",
+			2456, 74877644, 42949672, 0, 456, ULONG_MAX, -ULONG_MAX);
 	printf("\n");
-	count_1 = printf("h%cel  %l %s %d %i le %u %% %x %X %p %p", 'm', "hello",2453, 74877644, 42949672,0, 456, (void *)(ULONG_MAX) ,(void *)(-ULONG_MAX));
-        printf("\n%d\n", count);
+	count_1 = printf("h%cel  %l %s %d %i le %u %% %x %X %p %p", 'm', "hello",
+			2453, 74877644, 42949672, 0, 456, (void *)(ULONG_MAX),
+			(void *)(-ULONG_MAX));
+	printf("\n%d\n", count);
 	printf("%d\n", count_1);
-
 }
-

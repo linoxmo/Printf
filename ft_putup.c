@@ -14,15 +14,14 @@
 
 int	ft_putup(unsigned int nb)
 {
-        int     count;
-        char    nbr;
+	int		count;
+	char	nbr;
 
-        count = 0;
-        if (nb > 9)
-                count += ft_putup(nb / 10);
-        nbr = (nb % 10) + 48;
-        write(1, &nbr, 1);
-        count ++;
-        return (count);
-
+	count = 0;
+	if (nb > 9)
+		count += ft_putup(nb / 10);
+	nbr = (nb % 10) + 48;
+	write(1, &nbr, 1);
+	count++;
+	return (count);
 }
